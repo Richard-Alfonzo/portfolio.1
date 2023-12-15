@@ -1,0 +1,96 @@
+:root {
+    --primary-color: hsl(214, 84%, 56%);
+    --text-color: hsl(0, 0%, 31%);
+    --bg-light: hsl(0, 0%, 90%);
+    --bg-dark: hsl(0, 0%, 15%);
+    --bg-card-light: hsl(0, 0%, 98%);
+    --bg-card-dark: hsl(0, 0%, 10%);
+    --transition: color 1s, background-color 0.3s ease-in-out;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-light); /* Color de fondo en modo claro */
+    color: var(--text-color);
+    transition: background-color 0.5s ease; /* Agrega transición suave al cambio de color de fondo */
+}
+
+body.dark {
+    --text-color: hsl(0, 0%, 83%);
+    --bg-light: var(--bg-card-dark); /* Color de fondo en modo oscuro */
+    --bg-card-light: hsl(0, 0%, 92%); /* Fondo de las tarjetas en modo claro */
+    background-color: var(--bg-light);
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 75px;
+    padding: 0 1.5em;
+    background-color: var(--bg-card-dark);
+}
+
+.switches {
+    display: flex;
+    align-items: center;
+  /*   justify-content: flex-start; */
+}
+
+.toggle-theme{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+} 
+
+.toggle-theme_icon{
+    margin-right: 0.5em;
+    width: 20px;
+}
+
+.toggle-theme_text {
+    font-size: 0.8rem;
+}
+
+.colors{
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 20px;
+    width: 100px;
+}
+
+.colors_item{
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--text-color);
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.colors_item--blue{
+    --primary-color: hsl(214, 84%, 56%);
+}
+
+.colors_item--green{
+    --primary-color: hsl(150, 84%, 56%);
+}
+
+.colors_item--purple{
+    --primary-color: hsl(276, 84%, 56%);
+}
+
+.colors_item--orange{
+    --primary-color: hsl(46, 84%, 56%);
+}
+
+.title{
+    text-align: center;
+    color: var(--primary-color);
+    transition: var(--transition);
+};
